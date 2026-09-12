@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=800&size=32&pause=1000&color=2563EB&center=true&vCenter=true&width=800&height=80&lines=AI+Procurement+Standards+Assistant;Automated+BIS+Standard+Matching;Intelligent+Knowledge+Graphs;Built+for+SIH+2026" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=800&size=32&pause=1000&color=2563EB&center=true&vCenter=true&width=800&height=80&lines=AI+Procurement+Standards+Recommendation+Assistant;Automated+BIS+Standard+Matching;Intelligent+Knowledge+Graphs;Built+for+SIH+2026" alt="Typing SVG" />
 
 **An Intelligent Information Retrieval System for Government e-Procurement**
 
