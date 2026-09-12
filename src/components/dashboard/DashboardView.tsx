@@ -116,7 +116,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate, onOpen
               <span>Bureau of Indian Standards (BIS) Recommendation System</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
-              Welcome to the AI Procurement Standards Assistant
+              Welcome to the National Standards Intelligence System (NSIS)
             </h2>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
               Identify applicable Indian Standards, statutory Quality Control Orders (QCO), normative references, and conformity assessment schemes from unstructured procurement specifications and tender text.

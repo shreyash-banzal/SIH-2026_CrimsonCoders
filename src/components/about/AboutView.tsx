@@ -26,7 +26,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenIntegrations }) => {
           <span>System Architecture & Operational Methodology</span>
         </div>
         <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
-          About the AI Procurement Standards Assistant
+          About the National Standards Intelligence System (NSIS)
         </h2>
         <p className="text-sm text-slate-600 mt-1">
           Comprehensive guide explaining the hybrid RAG architecture, knowledge graph expansion, anti-hallucination mechanisms, and human-in-the-loop procurement governance.
@@ -40,7 +40,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenIntegrations }) => {
           <h3 className="font-bold text-slate-900 text-base">What is this System?</h3>
         </div>
         <p className="text-sm text-slate-700 leading-relaxed">
-          The AI Procurement Standards Assistant is an intelligent decision-support system built for the Smart India Hackathon. It assists government procurement officers, technical tender drafting committees, and specification engineers in rapidly identifying the exact Indian Standards (BIS codes) applicable to a given procurement requirement.
+          The National Standards Intelligence System is an intelligent decision-support system built for the Smart India Hackathon. It assists government procurement officers, technical tender drafting committees, and specification engineers in rapidly identifying the exact Indian Standards (BIS codes) applicable to a given procurement requirement.
         </p>
         <p className="text-sm text-slate-700 leading-relaxed">
           In public procurement under the General Financial Rules (GFR 2017) and Government e-Marketplace (GeM) directives, specifying authentic, up-to-date Indian Standards and Quality Control Order (QCO) compliance is legally required to guarantee quality, safety, and level-playing field competition.

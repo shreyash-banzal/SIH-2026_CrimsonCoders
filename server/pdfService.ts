@@ -1,6 +1,5 @@
 // @ts-ignore
-import * as pdfParseImport from 'pdf-parse';
-const pdfParse: any = (pdfParseImport as any).default || pdfParseImport;
+import { PDFParse } from 'pdf-parse';
 
 export interface ParsedTenderPdfResult {
   filename: string;
@@ -88,7 +87,8 @@ export async function parseTenderPdf(
   buffer: Buffer,
   filename: string
 ): Promise<ParsedTenderPdfResult> {
-  const data = await pdfParse(buffer);
+  const parser = new PDFParse(new Uint8Array(buffer));
+  const data = await parser.getText();
   const text = data.text ? data.text.trim() : '';
 
   const clauses = extractClausesFromText(text);
@@ -96,14 +96,14 @@ export async function parseTenderPdf(
 
   // Extract a clean title from first few lines or filename
   const firstLines = text.split('\n').slice(0, 5).map(l => l.trim()).filter(l => l.length > 5);
-  const suggestedTitle = firstLines.length > 0 
-    ? firstLines[0].substring(0, 90) 
+  const suggestedTitle = firstLines.length > 0
+    ? firstLines[0].substring(0, 90)
     : filename.replace(/\.pdf$/i, '').replace(/[-_]/g, ' ');
 
   return {
     filename,
     fileSizeBytes: buffer.length,
-    pageCount: data.numpages || 1,
+    pageCount: data.total || 1,
     extractedText: text,
     extractedClauses: clauses,
     suggestedTitle,
@@ -117,7 +117,7 @@ export async function parseTenderPdf(
 export function createSamplePdfBuffer(title: string, text: string): Buffer {
   const sanitizedTitle = title.replace(/[()\\]/g, '');
   const sanitizedText = text.replace(/[()\\]/g, '');
-  
+
   // Wrap lines for PDF BT stream
   const chunk1 = sanitizedText.slice(0, 80);
   const chunk2 = sanitizedText.slice(80, 160);

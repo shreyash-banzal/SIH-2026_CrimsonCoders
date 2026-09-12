@@ -24,8 +24,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenI
         <div className="flex items-center space-x-2">
           <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span className="font-medium text-slate-300">Government Procurement Standards Decision Support Portal</span>
-          <span className="text-slate-600">|</span>
-          <span className="text-slate-400">Smart India Hackathon Working Prototype</span>
         </div>
         <div className="flex items-center space-x-3 text-xs">
           <span className="inline-flex items-center px-2 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800/80 font-medium">
@@ -39,13 +37,13 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenI
       {/* Main Brand Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div className="flex items-start space-x-3 cursor-pointer" onClick={() => setActiveTab('dashboard')}>
-          <div className="p-2.5 bg-blue-700 rounded-lg shadow-inner border border-blue-500">
-            <ShieldCheck className="w-8 h-8 text-white" />
+          <div className="p-1 bg-blue-700 rounded-lg shadow-inner border border-blue-500 flex items-center justify-center">
+            <img src="/images/logo.png" alt="NSIS Logo" className="w-10 h-10 object-contain" />
           </div>
           <div>
             <div className="flex items-center space-x-2">
               <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
-                AI Procurement Standards Assistant
+                National Standards Intelligence System (NSIS)
               </h1>
               <span className="px-2 py-0.5 text-xs font-semibold uppercase rounded bg-blue-800 text-blue-200 border border-blue-600">
                 BIS Engine
@@ -96,11 +94,10 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onOpenI
                   key={item.id}
                   id={`nav-tab-${item.id}`}
                   onClick={() => setActiveTab(item.id)}
-                  className={`flex items-center space-x-2 px-3.5 py-2 text-sm font-medium rounded-md transition-colors whitespace-nowrap ${
-                    isActive
+                  className={`flex items-center space-x-2 px-3.5 py-2 text-sm font-medium rounded-md transition-colors whitespace-nowrap ${isActive
                       ? 'bg-blue-700 text-white shadow-sm'
                       : 'text-slate-300 hover:bg-slate-700/60 hover:text-white'
-                  }`}
+                    }`}
                 >
                   <Icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-slate-400'}`} />
                   <span>{item.label}</span>

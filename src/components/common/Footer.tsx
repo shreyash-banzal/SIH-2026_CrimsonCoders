@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
           <div>
             <div className="flex items-center space-x-2 text-white font-bold text-base mb-2">
               <ShieldCheck className="w-5 h-5 text-blue-400" />
-              <span>AI Procurement Standards Assistant</span>
+              <span>National Standards Intelligence System (NSIS)</span>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
               An AI-powered decision support system developed for public procurement tender committees to rapidly identify applicable Bureau of Indian Standards (BIS) specifications, normative cross-references, and conformity assessment schemes.
